@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2014 AtoS.&#xD;&#xA;&#xD;&#xA;   &#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html"
+    modelDirectory="/com.cnes.checktool.oclrules/src" modelPluginID="com.cnes.checktool.oclrules"
+    modelName="oclRules" testsDirectory="" testSuiteClass="" importerID="org.eclipse.emf.importer.ecore"
+    copyrightFields="false" testsPluginID="com.cnes.checktool.oclrules.tests" usedGenPackages="../../com.cnes.checktool/src/com/cnes/checktool/model/checktool.results.genmodel#//results platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore">
+  <foreignModel>checktool.results.oclrules.ecore</foreignModel>
+  <genPackages prefix="OclRules" basePackage="com.cnes.checktool.oclrules" disposableProviderFactory="true"
+      ecorePackage="checktool.results.oclrules.ecore#/">
+    <genDataTypes ecoreDataType="checktool.results.oclrules.ecore#//OCLResource"/>
+    <genClasses ecoreClass="checktool.results.oclrules.ecore#//OCLRule">
+      <genFeatures children="true" createChild="false" ecoreFeature="ecore:EAttribute checktool.results.oclrules.ecore#//OCLRule/queryBody"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference checktool.results.oclrules.ecore#//OCLRule/context"/>
+      <genFeatures children="true" createChild="false" ecoreFeature="ecore:EAttribute checktool.results.oclrules.ecore#//OCLRule/constraintName"/>
+    </genClasses>
+    <genClasses ecoreClass="checktool.results.oclrules.ecore#//OCLRuleFile">
+      <genOperations ecoreOperation="checktool.results.oclrules.ecore#//OCLRuleFile/getResource"/>
+      <genOperations ecoreOperation="checktool.results.oclrules.ecore#//OCLRuleFile/completeFiles">
+        <genParameters ecoreParameter="checktool.results.oclrules.ecore#//OCLRuleFile/completeFiles/resources"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

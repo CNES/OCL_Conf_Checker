@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="4.15"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="results.presentation.ResultsModelWizardID"
+            name="%_UI_ResultsModelWizard_label"
+            class="com.cnes.checktool.results.presentation.ResultsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ResultsModelFile.gif">
+         <description>%_UI_ResultsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="results.presentation.ResultsEditorID"
+            name="%_UI_ResultsEditor_label"
+            icon="icons/full/obj16/ResultsModelFile.gif"
+            extensions="result"
+            class="com.cnes.checktool.results.presentation.ResultsEditor"
+            contributorClass="com.cnes.checktool.results.presentation.ResultsActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated checktool.results -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.cnes.checktool.results.presentation.ResultsModelWizardID"
+            name="%_UI_ResultsModelWizard_label"
+            class="com.cnes.checktool.results.presentation.ResultsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ResultsModelFile.gif">
+         <description>%_UI_ResultsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated checktool.results -->
+      <editor
+            id="com.cnes.checktool.results.presentation.ResultsEditorID"
+            name="%_UI_ResultsEditor_label"
+            icon="icons/full/obj16/ResultsModelFile.gif"
+            extensions="results"
+            class="com.cnes.checktool.results.presentation.ResultsEditor"
+            contributorClass="com.cnes.checktool.results.presentation.ResultsActionBarContributor">
+      </editor>
+   </extension>
+</plugin>

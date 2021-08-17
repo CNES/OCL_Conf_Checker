@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="4.15"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="oclRules.presentation.OclRulesModelWizardID"
+            name="%_UI_OclRulesModelWizard_label"
+            class="com.cnes.checktool.oclrules.oclRules.presentation.OclRulesModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/OclRulesModelFile.gif">
+         <description>%_UI_OclRulesModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="oclRules.presentation.OclRulesEditorID"
+            name="%_UI_OclRulesEditor_label"
+            icon="icons/full/obj16/OclRulesModelFile.gif"
+            extensions="oclrules"
+            class="com.cnes.checktool.oclrules.oclRules.presentation.OclRulesEditor"
+            contributorClass="com.cnes.checktool.oclrules.oclRules.presentation.OclRulesActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated checktool.results.oclrules -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.cnes.checktool.oclrules.oclRules.presentation.OclRulesModelWizardID"
+            name="%_UI_OclRulesModelWizard_label"
+            class="com.cnes.checktool.oclrules.oclRules.presentation.OclRulesModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/OclRulesModelFile.gif">
+         <description>%_UI_OclRulesModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated checktool.results.oclrules -->
+      <editor
+            id="com.cnes.checktool.oclrules.oclRules.presentation.OclRulesEditorID"
+            name="%_UI_OclRulesEditor_label"
+            icon="icons/full/obj16/OclRulesModelFile.gif"
+            extensions="oclrules"
+            class="com.cnes.checktool.oclrules.oclRules.presentation.OclRulesEditor"
+            contributorClass="com.cnes.checktool.oclrules.oclRules.presentation.OclRulesActionBarContributor">
+      </editor>
+   </extension>
+</plugin>

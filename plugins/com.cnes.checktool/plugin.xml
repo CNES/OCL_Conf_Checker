@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="4.15"?>
+<plugin>
+   <extension-point id="com.cnes.checktool.rulesets.rulefilemanager" name="Rule File Manager" schema="schema/com.cnes.checktool.rulesets.rulefilemanager.exsd"/>
+   <extension-point id="com.cnes.checktool.metamodel.epackage" name="Preloaded EPackage" schema="schema/com.cnes.checktool.metamodel.epackage.exsd"/>
+   <extension
+         id="com.cnes.checktool.application"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="com.cnes.checktool.application.BatchModeApplication">
+         </run>
+      </application>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated checktool.results -->
+      <package
+            uri="http:///www.topcased.org/checktool/results.ecore"
+            class="com.cnes.checktool.results.ResultsPackage"
+            genModel="src/com/cnes/checktool/model/checktool.results.genmodel"/>
+   </extension>
+
+   <extension
+         point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            class="com.cnes.checktool.results.util.ResultsResourceFactoryImpl"
+            type="result">
+      </parser>
+   </extension>
+   <extension
+         point="com.cnes.checktool.metamodel.epackage">
+      <EPackage
+            EPackageURI="http://www.xtratum.org/xm-2.3">
+      </EPackage>
+      <EPackage
+            EPackageURI="http://www.fentiss.com/xngModuleXml">
+      </EPackage>
+      <EPackage
+            EPackageURI="http://www.cnes.fr/lvcugen/conf/1.0/">
+      </EPackage>
+   </extension>
+
+</plugin>

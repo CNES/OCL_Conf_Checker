@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: OCLChecker documentation
+Bundle-SymbolicName: com.cnes.checktool.documentation;singleton:=true
+Bundle-Version: 1.1.0.qualifier
+Automatic-Module-Name: testdoc
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

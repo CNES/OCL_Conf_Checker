@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="OCL Checker">
+	<topic label="OCL Checker user manual"  href="html/MAINT_LVCUGEN-028-MUT_v1.1.htm"> 
+		<topic label="Presentation"/>
+  <topic label="Instantiation on new architecture">
+  </topic>
+  <topic label="Installation">
+  </topic>
+  <topic label="Usage (GUI)">
+  </topic>
+  <topic label="Usage with multiple metamodels">
+  </topic>
+  <topic label="Batch mode Usage">
+  </topic>
+  <topic label="Release an update site for a new version of XSD">
+  </topic>
+  <topic label="Visualize metamodel as a diagram">
+  </topic> 
+	</topic>
+</toc>

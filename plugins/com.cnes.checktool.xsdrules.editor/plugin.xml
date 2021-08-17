@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="4.15"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="xsdRules.presentation.XsdRulesModelWizardID"
+            name="%_UI_XsdRulesModelWizard_label"
+            class="com.cnes.checktool.xsdrules.xsdRules.presentation.XsdRulesModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/XsdRulesModelFile.gif">
+         <description>%_UI_XsdRulesModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="xsdRules.presentation.XsdRulesEditorID"
+            name="%_UI_XsdRulesEditor_label"
+            icon="icons/full/obj16/XsdRulesModelFile.gif"
+            extensions="xsdrules"
+            class="com.cnes.checktool.xsdrules.xsdRules.presentation.XsdRulesEditor"
+            contributorClass="com.cnes.checktool.xsdrules.xsdRules.presentation.XsdRulesActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated checktool.results.xsdrules -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.cnes.checktool.xsdrules.xsdRules.presentation.XsdRulesModelWizardID"
+            name="%_UI_XsdRulesModelWizard_label"
+            class="com.cnes.checktool.xsdrules.xsdRules.presentation.XsdRulesModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/XsdRulesModelFile.gif">
+         <description>%_UI_XsdRulesModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated checktool.results.xsdrules -->
+      <editor
+            id="com.cnes.checktool.xsdrules.xsdRules.presentation.XsdRulesEditorID"
+            name="%_UI_XsdRulesEditor_label"
+            icon="icons/full/obj16/XsdRulesModelFile.gif"
+            extensions="xsdrules"
+            class="com.cnes.checktool.xsdrules.xsdRules.presentation.XsdRulesEditor"
+            contributorClass="com.cnes.checktool.xsdrules.xsdRules.presentation.XsdRulesActionBarContributor">
+      </editor>
+   </extension>
+</plugin>

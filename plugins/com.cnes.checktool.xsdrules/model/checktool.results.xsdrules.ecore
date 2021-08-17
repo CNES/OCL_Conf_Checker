@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="xsdRules"
+    nsURI="http:///www.topcased.org/checktool/xsdRules.ecore" nsPrefix="xsdRules">
+  <eClassifiers xsi:type="ecore:EClass" name="XSDRuleFile" eSuperTypes="../../com.cnes.checktool/src/com/cnes/checktool/model/checktool.results.ecore#//RuleFile">
+    <eOperations name="getFileExtension" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eOperations name="getFile" eType="#//IFile"/>
+    <eOperations name="setFile">
+      <eParameters name="iFile" eType="#//IFile"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="XSDResult" eSuperTypes="../../com.cnes.checktool/src/com/cnes/checktool/model/checktool.results.ecore#//Result">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="errorMessage" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
+        defaultValueLiteral="&quot;&quot;"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="XSDRule" eSuperTypes="../../com.cnes.checktool/src/com/cnes/checktool/model/checktool.results.ecore#//Rule"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="IFile" instanceClassName="org.eclipse.core.resources.IFile"/>
+</ecore:EPackage>

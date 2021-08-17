@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="oclRules" nsURI="http:///www.topcased.org/checktool/oclRules.ecore"
+    nsPrefix="oclRules">
+  <eClassifiers xsi:type="ecore:EClass" name="OCLRule" eSuperTypes="../../com.cnes.checktool/src/com/cnes/checktool/model/checktool.results.ecore#//Rule">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="queryBody" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="context" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constraintName" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OCLRuleFile" eSuperTypes="../../com.cnes.checktool/src/com/cnes/checktool/model/checktool.results.ecore#//RuleFile">
+    <eOperations name="getResource" eType="#//OCLResource"/>
+    <eOperations name="completeFiles">
+      <eParameters name="resources" upperBound="-1" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EResource"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="OCLResource" instanceClassName="com.cnes.checktool.oclrules.oclRules.util.OCLResource"/>
+</ecore:EPackage>

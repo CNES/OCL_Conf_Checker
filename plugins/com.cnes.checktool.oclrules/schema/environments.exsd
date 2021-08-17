@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="com.cnes.checktool.oclrules" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appinfo>
+         <meta.schema plugin="com.cnes.checktool.oclrules" id="environments" name="Registered OCL Environments"/>
+      </appinfo>
+      <documentation>
+         Static registration of OCL environments in the &lt;tt&gt;Environment.Registry&lt;/tt&gt;.
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appinfo>
+            <meta.element />
+         </appinfo>
+      </annotation>
+      <complexType>
+         <sequence minOccurs="1" maxOccurs="unbounded">
+            <element ref="environmentFactory"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute translatable="true"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="environmentFactory">
+      <annotation>
+         <appinfo>
+            <meta.element labelAttribute="class"/>
+         </appinfo>
+         <documentation>
+            Registers an OCL &lt;tt&gt;EcoreEnvironmentFactory&lt;/tt&gt; for a metamodel.  The metamodel is represented by one or more &lt;tt&gt;EPackage&lt;/tt&gt;s, specified as nested elements.
+         </documentation>
+      </annotation>
+      <complexType>
+         <sequence minOccurs="1" maxOccurs="unbounded">
+            <element ref="package"/>
+         </sequence>
+         <attribute name="class" type="string" use="required">
+            <annotation>
+               <documentation>
+                  References an implementation of the &lt;code&gt;EnvironmentFactory&lt;/code&gt; interface providing the OCL parsing support for the particular metamodel.
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn="org.eclipse.uml2.ocl.EcoreEnvironmentFactory:"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="package">
+      <annotation>
+         <documentation>
+            Identifies a metamodel for which the associated &lt;code&gt;EnvironmentFactory&lt;/code&gt; provides OCL parsing support.  The metamodel is identified by its namespace URI.
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="nsURI" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The namespace URI of the metamodel.
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="since"/>
+      </appinfo>
+      <documentation>
+         4.0.0
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="examples"/>
+      </appinfo>
+      <documentation>
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="apiInfo"/>
+      </appinfo>
+      <documentation>
+         &lt;p&gt;
+The value of the &lt;tt&gt;&amp;lt;environmentFactory&amp;gt;&lt;/tt&gt; element &lt;tt&gt;class&lt;/tt&gt; attribute must be the fully qualified name of a class that implements
+the &lt;code&gt;&lt;a href=&quot;../javadoc/org/eclipse/ocl/EcoreEnvironmentFactory.html&quot;&gt;EcoreEnvironmentFactory&lt;/a&gt;&lt;/code&gt; interface.  It is instantiated using the default (no-argument) constructor.
+&lt;/p&gt;&lt;p&gt;
+Environments provided on this extension point are registered implicitly in the shared instance of the
+&lt;code&gt;&lt;a href=&quot;../javadoc/org/eclipse/ocl/Environment.Registry.html&quot;&gt;Environment.Registry&lt;/a&gt;&lt;/code&gt;.
+&lt;/p&gt;
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="implementation"/>
+      </appinfo>
+      <documentation>
+         &lt;p&gt;
+The value of the &lt;tt&gt;&amp;lt;environmentFactory&amp;gt;&lt;/tt&gt; element &lt;tt&gt;class&lt;/tt&gt; attribute must be the fully qualified name of a class that implements
+the &lt;code&gt;&lt;a href=&quot;../javadoc/org/eclipse/ocl/EcoreEnvironmentFactory.html&quot;&gt;EcoreEnvironmentFactory&lt;/a&gt;&lt;/code&gt; interface.  It is instantiated using the default (no-argument) constructor.
+&lt;/p&gt;&lt;p&gt;
+Environments provided on this extension point are registered implicitly in the shared instance of the
+&lt;code&gt;&lt;a href=&quot;../javadoc/org/eclipse/ocl/Environment.Registry.html&quot;&gt;Environment.Registry&lt;/a&gt;&lt;/code&gt;.
+&lt;/p&gt;
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="copyright"/>
+      </appinfo>
+      <documentation>
+         Copyright (c) 2010  Topcased consortium.&lt;br&gt;
+ All rights reserved. This program and the accompanying materials 
+ are made available under the terms of the Eclipse Public License v1.0 
+ which accompanies this distribution, and is available at 
+ &lt;a href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
+      </documentation>
+   </annotation>
+
+</schema>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="4.15"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http:///www.topcased.org/checktool/oclRules.ecore"
+            class="com.cnes.checktool.oclrules.oclRules.OclRulesPackage"
+            genModel="model/checktool.results.oclrules.genmodel"/>
+   </extension>
+   <extension
+         point="com.cnes.checktool.rulesets.rulefilemanager">
+      <manager
+            Extension="ocl"
+            Manager="com.cnes.checktool.oclrules.OCLRuleFileManager">
+      </manager>
+   </extension>
+      <extension-point id="environments" name="Registered OCL Environments" schema="schema/environments.exsd"/>
+   <extension
+         point="com.cnes.checktool.oclrules.environments">
+      <environmentFactory
+            class="com.cnes.checktool.oclrules.util.ToolkitEnvironmentFactory">
+         <package
+               nsURI="http://www.topcased.org/2.0/sysML">
+         </package>
+         <package
+               nsURI="http://www.topcased.org/DI/1.0">
+         </package>
+         <package
+               nsURI="http://org.topcased.requirement/1.0">
+         </package>
+         <package
+               nsURI="http://org.topcased.traceability.model/1.0">
+         </package>
+         <package
+               nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         </package>
+      </environmentFactory>
+   </extension>
+</plugin>

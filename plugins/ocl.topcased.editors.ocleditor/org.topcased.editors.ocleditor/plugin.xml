@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.topcased.editors.ocleditor.editor.OCLEditor"
+            default="true"
+            extensions="oclfile"
+            icon="icons/topcased-icon16.gif"
+            id="org.topcased.editors.ocleditor.editor"
+            name="%editor.name"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            category="org.topcased.facilities.newWizards"
+            class="org.topcased.editors.ocleditor.wizard.NewRuleFileWizard"
+            icon="icons/topcased-icon16.gif"
+            id="org.topcased.editors.ocleditor.newFileWizard"
+            name="%wizard.name"
+            project="false">
+         <description>
+            Create a new OCL rules file
+         </description>
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.pde.ui.pluginContent">
+      <wizard
+            class="org.topcased.editors.ocleditor.wizard.TopcasedOCLPluginWizard"
+            icon="icons/topcased-icon16.gif"
+            id="org.topcased.editors.ocleditor.plugin"
+            java="true"
+            name="Create a Topcased OCL plug-in"
+            pureOSGi="false"
+            rcp="false"
+            requiresActivator="true"
+            ui-content="true">
+         <description>
+            This wizard allows to create a plug-in containing OCL rule files. For each embedded OCL file, the extensions&apos;org.topcased.validation.ocl.metamodels&apos; is automatically set in the plugin.xml. This future plug-in could be used with the Topcased OCL Checker.
+         </description>
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension targetID="org.topcased.modeler.perspective">
+         <newWizardShortcut id="org.topcased.editors.ocleditor.newFileWizard"/>
+      </perspectiveExtension>
+   </extension>
+   
+   <extension
+         id="builders.oclEditorProjectNature"
+         name="OCL Project Nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run class="org.topcased.editors.ocleditor.editor.builders.OCLProjectNature"/>
+      </runtime>
+      <builder id="org.topcased.editors.ocleditor.builders.oclEditorBuilder"/>
+   </extension>
+   
+   <extension
+         id="builders.oclEditorBuilder"
+         name="OCL Editor Builder"
+         point="org.eclipse.core.resources.builders">
+      <builder hasNature="true">
+         <run class="org.topcased.editors.ocleditor.editor.builders.OCLEditorBuilder"/>
+      </builder>
+   </extension>
+    
+
+</plugin>

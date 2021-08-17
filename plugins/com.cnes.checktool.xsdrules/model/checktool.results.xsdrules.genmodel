@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2014 AtoS.&#xD;&#xA;&#xD;&#xA;   &#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html"
+    modelDirectory="/com.cnes.checktool.xsdrules/src" modelPluginID="com.cnes.checktool.xsdrules"
+    modelName="Checktool.results" testsDirectory="" testSuiteClass="" importerID="org.eclipse.emf.importer.ecore"
+    copyrightFields="false" testsPluginID="com.cnes.checktool.xsdrules.tests"
+    usedGenPackages="../../com.cnes.checktool/src/com/cnes/checktool/model/checktool.results.genmodel#//results platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore">
+  <foreignModel>checktool.results.xsdrules.ecore</foreignModel>
+  <genPackages prefix="XsdRules" basePackage="com.cnes.checktool.xsdrules" disposableProviderFactory="true"
+      generateExampleClass="false" ecorePackage="checktool.results.xsdrules.ecore#/">
+    <genDataTypes ecoreDataType="checktool.results.xsdrules.ecore#//IFile"/>
+    <genClasses ecoreClass="checktool.results.xsdrules.ecore#//XSDRuleFile">
+      <genOperations ecoreOperation="checktool.results.xsdrules.ecore#//XSDRuleFile/getFileExtension"/>
+      <genOperations ecoreOperation="checktool.results.xsdrules.ecore#//XSDRuleFile/getFile"/>
+      <genOperations ecoreOperation="checktool.results.xsdrules.ecore#//XSDRuleFile/setFile">
+        <genParameters ecoreParameter="checktool.results.xsdrules.ecore#//XSDRuleFile/setFile/iFile"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="checktool.results.xsdrules.ecore#//XSDResult">
+      <genFeatures children="true" createChild="false" ecoreFeature="ecore:EAttribute checktool.results.xsdrules.ecore#//XSDResult/errorMessage"/>
+    </genClasses>
+    <genClasses ecoreClass="checktool.results.xsdrules.ecore#//XSDRule"/>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="4.15"?>
+<plugin>
+   <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="com.cnes.checktool.xsdrules.xsdRules.XsdRulesPackage"
+            genModel="model/checktool.results.xsdrules.genmodel"
+            uri="http:///www.topcased.org/checktool/xsdRules.ecore">
+      </package>
+   </extension>
+   <extension
+         point="com.cnes.checktool.rulesets.rulefilemanager">
+      <manager
+            Extension="com.cnes.checktool.xsdrules.manager1"
+            Manager="com.cnes.checktool.xsdrules.AbstractRuleFileManager:1">
+      </manager>
+   </extension>
+</plugin>
